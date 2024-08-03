@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* import шрифтоф  */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Общий классы  */
+body{
+  background-color: #10141E;
+  overflow-x: hidden;
+}
+
+form input{
+  caret-color:#FC4747;
+}
+.container{
+  width: 1430px;
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+input:focus {
+
+  border-color: transparent; /* Прозрачные остальные границы */
+  border-bottom-color: white; /* Белый цвет нижней границы */
+  color: white;
+  background-color: transparent;
+}
+.NavSvg{
+  font-size: 200px;
+}
+aside svg:hover{
+  color: #FC4747 !important;
+}
+aside svg:hover{
+  fill: #FC4747 !important;
+}
+button:hover{
+  background-color: transparent;
+  color: #FC4747;
+}
+.slider_card{
+  display: none;
+}
+.card__slider:hover .slider_card{
+    display: block;
+    display: flex;
+}
+.slider__card-icon{
+  transition: 0.5s;
+}
+.slider__card-icon:hover{
+  background-color: rgba(255, 255, 255, 0.658) !important;
+}
+.slider__card-icon-svg{
+  stroke: white;
+  transition: 0.5s;
+}
+.slider__card-icon:hover .slider__card-icon-svg{
+  stroke: black !important;
+}
+.slider__active{
+  fill: white;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scrollbar-track{
+  background: black;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+  background:#FC4747;
+  border-radius: 15px;
+}
+
+
+@media(max-width:1060px){
+  .Wrapper{
+    grid-template-columns: repeat(3,1fr);
+    padding: 0px;
+  }
+  .Section{
+    padding: 0px 5px;
+  }
+  .section__card{
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+@media(max-width:850px){
+  .section__card{
+    width: 200px !important;
+  }
+  aside{
+    display: none !important;
+  }
+  header{
+    display: block !important;
+  }
+}
+@media(max-width:680px){
+  .Wrapper{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media(max-width:430px){
+  .section__card{
+    width: 170px !important;
+  }
+  .section__card span{
+    font-size: 10px;
+  }
+  .Wrapper{
+    gap: 10px;
+  }
+
+}
+@media(max-width:330px){
+  .Wrapper{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
